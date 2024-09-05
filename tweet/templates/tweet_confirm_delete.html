@@ -3,5 +3,16 @@
 Chai Aur Tweet
 {% endblock %}
 {% block content %}
-<h1 class="text-center mt-4">Welcome to Chai Django </h1>
+<h1 class="text-center mt-4">Are you sure that you want to delete this tweet ?</h1>
+<form method='post'>
+<button 
+    class='btn btn-danger'>
+    {% csrf_token %}
+    Delete
+</button>
+    <a class ='btn btn-success'
+    href="{% url 'tweet_list' %}">
+        Cancel
+    </a>
+</form>
 {% endblock %}
